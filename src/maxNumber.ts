@@ -7,5 +7,10 @@
  */
 export function findMaxNumber(numbers: number[]): number {
     // 在此實現函式
-    return Math.max(...numbers);
+    // 1.
+    // return Math.max(...numbers);
+    // 2.
+    return numbers.reduce((pre, cur) => {
+        return Math.max(pre, cur);
+    }, numbers[0]);
 }
